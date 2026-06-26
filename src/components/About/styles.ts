@@ -165,7 +165,7 @@ export const OverlayRoleContainer = styled.div`
   gap: 8px;
   flex-wrap: wrap;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
