@@ -293,6 +293,11 @@ export const DeviceSimulatorFrame = styled.div`
   margin-bottom: 24px; /* mb-6 */
   z-index: 10;
   background-color: #09090b; /* bg-zinc-950 */
+
+  @media (max-width: 640px) {
+    height: 190px;
+    aspect-ratio: unset;
+  }
 `;
 
 export const SimulatorHeadControls = styled.div`

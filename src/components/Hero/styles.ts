@@ -101,6 +101,11 @@ export const MicroNotificationTag = styled(motion.div)<{ $isDark: boolean }>`
   font-weight: 500;
   letter-spacing: 0.025em; /* tracking-wide */
   margin-bottom: 56px;
+
+  @media (max-width: 768px) {
+    margin-top: 8px;
+    margin-bottom: 66px;
+  }
   transition:
     background-color 0.8s,
     border-color 0.8s,
@@ -210,9 +215,9 @@ export const CaricatureContainer = styled.div`
 export const MobileCaricatureWrapper = styled.div`
   display: none;
 
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 16px auto;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 0 auto;
 
   align-items: center;
   justify-content: center;
@@ -222,6 +227,7 @@ export const MobileCaricatureWrapper = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
+    margin-bottom: 5px;
   }
 `;
 

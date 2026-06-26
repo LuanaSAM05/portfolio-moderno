@@ -162,6 +162,14 @@ export const OverlayRoleContainer = styled.div`
   font-size: 10px;
   letter-spacing: 0.05em;
   color: #a78bfa;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
 `;
 
 export const StatusIndicatorCircle = styled.span`

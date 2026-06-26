@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "motion/react";
 import { Award, Zap, Code2, CloudLightning } from "lucide-react";
 import {
   AboutSectionContainer,
@@ -185,7 +186,14 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
           {/* Cards ABAIXO da foto: nome à esquerda, local time à direita */}
           <BelowPhotoRow>
             {/* Card com nome e role */}
-            <FrameMetadataOverlay $isDark={isDark}>
+            <FrameMetadataOverlay
+              as={motion.div}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              $isDark={isDark}
+            >
               <OverlayNameText>Luana Silva Alves Melo</OverlayNameText>
               <OverlayRoleContainer>
                 <span>FULL STACK DEV</span>
