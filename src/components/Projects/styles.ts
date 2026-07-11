@@ -499,12 +499,7 @@ export const ModalContentCard = styled(motion.div)<{ $isDark: boolean }>`
           color: #e4e4e7; /* text-zinc-101 */
         `
       : css`
-          background: linear-gradient(
-            to bottom right,
-            #ffffff,
-            #ffffff,
-            rgba(245, 243, 255, 0.3)
-          ); /* bg-gradient-to-br from-white via-white to-violet-50/30 */
+          background-color: #ede8ff;
           border-color: #ddd6fe; /* border-violet-200 */
           color: #1a1727; /* text-zinc-805 */
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
@@ -595,6 +590,7 @@ export const ModalMainBodyGrid = styled.div<{ $centered?: boolean }>`
 `;
 
 export const ModalRightQuickPanelRail = styled.div<{ $isDark: boolean }>`
+  box-sizing: border-box;
   border-radius: 12px;
   border: 1px solid;
   padding: 25px;
@@ -605,10 +601,13 @@ export const ModalRightQuickPanelRail = styled.div<{ $isDark: boolean }>`
     background-color 0.8s,
     border-color 0.8s;
 
-  width: fit-content;
-  min-width: 700px;
+  width: 100%;
   max-width: 820px;
   margin: 0 auto;
+
+  @media (max-width: 640px) {
+    padding: 18px;
+  }
 
   ${(props) =>
     props.$isDark
@@ -725,6 +724,12 @@ export const ModalCTAsGroup = styled.div`
   align-items: center;
   gap: 16px; /* gap-2 */
   padding-top: 8px; /* pt-2 */
+  flex-wrap: wrap;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
 `;
 
 export const ModalActionPrimaryButton = styled.button`
@@ -742,6 +747,10 @@ export const ModalActionPrimaryButton = styled.button`
   gap: 8px; /* gap-2 */
   border: none;
   cursor: pointer;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 
   &:hover {
     background-color: #6d28d9; /* hover:bg-violet-700 */
@@ -763,6 +772,10 @@ export const ModalActionSecondaryButton = styled.button<{ $isDark: boolean }>`
   align-items: center;
   justify-content: center;
   gap: 4px; /* gap-1 */
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 
   ${(props) =>
     props.$isDark
