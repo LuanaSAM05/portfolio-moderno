@@ -21,8 +21,8 @@ export const ContactSectionContainer = styled.section<{ $isDark: boolean }>`
         color: #ffffff;
       `
     : css`
-        background-color: #FCFAFF;
-        border-color: #f5f3ff;
+        background-color: #ede8ff;
+        border-color: #ede8ff;
         color: #181c24;
       `}
 `;
@@ -105,7 +105,7 @@ export const LinksCardPanel = styled.div<{ $isDark: boolean }>`
         background-color: rgba(9, 9, 11, 0.4);
       `
     : css`
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: #cec5f0;
         border-color: rgba(139, 92, 246, 0.08);
         box-shadow: 0 12px 45px rgba(139, 92, 246, 0.03);
       `}
@@ -308,7 +308,7 @@ export const WhatsAppCardPanel = styled.div<{ $isDark: boolean }>`
         box-shadow: 0 0 60px rgba(37, 211, 102, 0.04) inset;
       `
     : css`
-        background-color: rgba(255, 255, 255, 0.97);
+        background-color: #cec5f0;
         border-color: rgba(37, 211, 102, 0.2);
         box-shadow: 0 12px 48px rgba(37, 211, 102, 0.06);
       `}
@@ -327,11 +327,11 @@ export const WhatsAppGlowOrb = styled.div`
 
 export const WhatsAppCardEyebrow = styled.span<{ $isDark: boolean }>`
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  font-weight: 700;
-  color: #25D366;
+  font-weight: 900;
+  color: #09c44e;
 `;
 
 export const WhatsAppCardTitle = styled.h3<{ $isDark: boolean }>`

@@ -32,6 +32,7 @@ import {
   FooterBrandName,
   FooterPortfolioStamp,
   FooterTechnicalSpecsCol,
+  FooterIntroText,
   FooterCreditsMetaSubtext,
   FooterNavigationLinksBox,
   FooterNavSelector,
@@ -252,10 +253,12 @@ export default function Home() {
             </FooterBrandCreditsCol>
 
             <FooterTechnicalSpecsCol>
-              <p>Construindo soluções digitais através de código, aprendizado contínuo e paixão por tecnologia.</p>
+              <FooterIntroText $isDark={isDark}>
+                Construindo soluções digitais através de código, aprendizado contínuo e paixão por tecnologia.
+              </FooterIntroText>
               <FooterCreditsMetaSubtext $isDark={isDark}>
                 Direitos Reservados © 2026 Luana Silva Alves Melo. <br /> Desenvolvido com React, TypeScript, Styled
-                Components & Google IA Studio.
+                Components.
               </FooterCreditsMetaSubtext>
             </FooterTechnicalSpecsCol>
 

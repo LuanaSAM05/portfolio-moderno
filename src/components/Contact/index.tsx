@@ -45,8 +45,8 @@ const contactLinks = [
     value: "lsilvaalvesmelo@gmail.com",
     href: "mailto:lsilvaalvesmelo@gmail.com",
     icon: <Mail size={18} />,
-    brandColor: "#EA4335",
-    hoverColor: "#EA4335",
+    brandColorLight: "#EA4335",
+    brandColorDark: "#EA4335",
   },
   {
     id: "linkedin",
@@ -54,8 +54,8 @@ const contactLinks = [
     value: "linkedin.com/in/luana-s-a-melo",
     href: "https://www.linkedin.com/in/luana-s-a-melo-027a77365/",
     icon: <Linkedin size={18} />,
-    brandColor: "#0A66C2",
-    hoverColor: "#0A66C2",
+    brandColorLight: "#0A66C2",
+    brandColorDark: "#0A66C2",
   },
   {
     id: "instagram",
@@ -63,8 +63,8 @@ const contactLinks = [
     value: "@luuana_05",
     href: "https://www.instagram.com/luuana_05",
     icon: <Instagram size={18} />,
-    brandColor: "#E1306C",
-    hoverColor: "#E1306C",
+    brandColorLight: "#E1306C",
+    brandColorDark: "#E1306C",
   },
   {
     id: "github",
@@ -72,8 +72,8 @@ const contactLinks = [
     value: "github.com/LuanaSAM05",
     href: "https://github.com/LuanaSAM05",
     icon: <Github size={18} />,
-    brandColor: "#E6EDF3",
-    hoverColor: "#E6EDF3",
+    brandColorLight: "#24292f",
+    brandColorDark: "#E6EDF3",
   },
 
   {
@@ -82,8 +82,8 @@ const contactLinks = [
     value: "Remoto • Internacional",
     href: undefined,
     icon: <Globe size={18} />,
-    brandColor: "#22C55E",
-    hoverColor: "#22C55E",
+    brandColorLight: "#22C55E",
+    brandColorDark: "#22C55E",
   },
 ];
 
@@ -119,33 +119,39 @@ export default function ContactSection({ isDark = true }: ContactSectionProps) {
         <LinksCardPanel $isDark={isDark}>
           <LinksPanelTitle $isDark={isDark}>Canais Diretos</LinksPanelTitle>
           <LinkRowsList>
-            {contactLinks.map((link) => (
-              <InfoCardRow
-                key={link.id}
-                href={link.href || undefined}
-                target={link.href ? "_blank" : undefined}
-                rel={link.href ? "noopener noreferrer" : undefined}
-                $isDark={isDark}
-                $brandColor={link.brandColor}
-                $isClickable={!!link.href || link.id === "remote"}
-              >
-                <ActionIconContainerLeft
+            {contactLinks.map((link) => {
+              const brandColor = isDark
+                ? link.brandColorDark
+                : link.brandColorLight;
+
+              return (
+                <InfoCardRow
+                  key={link.id}
+                  href={link.href || undefined}
+                  target={link.href ? "_blank" : undefined}
+                  rel={link.href ? "noopener noreferrer" : undefined}
                   $isDark={isDark}
-                  $brandColor={link.brandColor}
+                  $brandColor={brandColor}
+                  $isClickable={!!link.href || link.id === "remote"}
                 >
-                  {link.icon}
-                </ActionIconContainerLeft>
-                <LabelGroup>
-                  <RowSuperMeta>{link.meta}</RowSuperMeta>
-                  <RowActualTextValue
+                  <ActionIconContainerLeft
                     $isDark={isDark}
-                    $brandColor={link.brandColor}
+                    $brandColor={brandColor}
                   >
-                    {link.value}
-                  </RowActualTextValue>
-                </LabelGroup>
-              </InfoCardRow>
-            ))}
+                    {link.icon}
+                  </ActionIconContainerLeft>
+                  <LabelGroup>
+                    <RowSuperMeta>{link.meta}</RowSuperMeta>
+                    <RowActualTextValue
+                      $isDark={isDark}
+                      $brandColor={brandColor}
+                    >
+                      {link.value}
+                    </RowActualTextValue>
+                  </LabelGroup>
+                </InfoCardRow>
+              );
+            })}
           </LinkRowsList>
         </LinksCardPanel>
 

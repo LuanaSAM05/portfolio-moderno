@@ -33,7 +33,7 @@ export const HeroBackground = styled.div<{ $isDark: boolean }>`
           background-color: #000000;
         `
       : css`
-          background: linear-gradient(160deg, #f3eeff 0%, #f8f4ff 40%, #ede8ff 100%);
+          background: #ede8ff;
         `}
 `;
 

@@ -22,7 +22,7 @@ export const ProjectsSectionContainer = styled.section<{ $isDark: boolean }>`
           color: #f4f4f5; /* text-zinc-100 */
         `
       : css`
-          background-color: #fcfaff;
+          background-color: #ede8ff;
           color: #181c24; /* text-zinc-900 */
         `}
 `;

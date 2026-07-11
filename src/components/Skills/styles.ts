@@ -23,8 +23,8 @@ export const SkillsSectionContainer = styled.section<{ $isDark: boolean }>`
           color: #ffffff;
         `
       : css`
-          background: linear-gradient(to bottom, #faf9fc, #faf8fe);
-          border-color: #f5f3ff;
+          background: #ede8ff;
+          border-color: #ede8ff;
           color: #181c24;
         `}
 `;

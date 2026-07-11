@@ -26,8 +26,8 @@ export const CertificatesSectionContainer = styled.section<{
           color: #ffffff;
         `
       : css`
-          background-color: #fafafe;
-          border-color: #f5f3ff;
+          background-color: #ede8ff;
+          border-color: #ede8ff;
           color: #181c24;
         `}
 `;
@@ -159,15 +159,15 @@ export const CrownJewelCard = styled(motion.div)<{ $isDark: boolean }>`
             rgba(76, 29, 149, 0.15) 0%,
             rgba(9, 9, 11, 0.8) 60%
           );
-          border-color: rgba(217, 119, 6, 0.35);
+          border-color: rgba(168, 85, 247, 0.4);
           box-shadow:
-            0 0 60px rgba(217, 119, 6, 0.08),
-            inset 0 1px 0 rgba(217, 119, 6, 0.1);
+            0 0 60px rgba(139, 92, 246, 0.12),
+            inset 0 1px 0 rgba(168, 85, 247, 0.12);
         `
       : css`
-          background: linear-gradient(135deg, #fffbeb 0%, #fefce8 60%);
-          border-color: rgba(217, 119, 6, 0.3);
-          box-shadow: 0 8px 40px rgba(217, 119, 6, 0.06);
+          background: linear-gradient(135deg, #3b0764 0%, #4c1d95 60%, #5b21b6 100%);
+          border-color: rgba(168, 85, 247, 0.5);
+          box-shadow: 0 8px 40px rgba(139, 92, 246, 0.25);
         `}
 `;
 
@@ -180,7 +180,7 @@ export const CrownJewelGlow = styled.div`
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(217, 119, 6, 0.12) 0%,
+    rgba(168, 85, 247, 0.18) 0%,
     transparent 70%
   );
   pointer-events: none;
@@ -192,13 +192,13 @@ export const CrownJewelBadge = styled.div`
   gap: 8px;
   padding: 6px 14px;
   border-radius: 9999px;
-  border: 1px solid rgba(217, 119, 6, 0.4);
-  background: rgba(217, 119, 6, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  background: rgba(139, 92, 246, 0.12);
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #d97706;
+  color: #c084fc;
   font-weight: 700;
   margin-bottom: 12px;
   width: fit-content;
@@ -215,7 +215,7 @@ export const CrownJewelTitle = styled.h3<{ $isDark: boolean }>`
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  color: ${(props) => (props.$isDark ? "#ffffff" : "#09090b")};
+  color: ${(props) => (props.$isDark ? "#ffffff" : "#ffffff")};
 
   @media (min-width: 640px) {
     font-size: 26px;
@@ -236,14 +236,14 @@ export const CrownMetaItem = styled.span<{ $golden?: boolean }>`
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-weight: 600;
-  color: ${(props) => (props.$golden ? "#d97706" : "#71717a")};
+  color: ${(props) => (props.$golden ? "#c084fc" : "#c4b5fd")};
 `;
 
 export const CrownMetaDot = styled.span`
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #d97706;
+  background-color: #a855f7;
   flex-shrink: 0;
 `;
 
@@ -252,7 +252,7 @@ export const CrownJewelDescription = styled.p<{ $isDark: boolean }>`
   line-height: 1.65;
   font-weight: 300;
   margin-top: 16px;
-  color: ${(props) => (props.$isDark ? "#a1a1aa" : "#52525b")};
+  color: ${(props) => (props.$isDark ? "#a1a1aa" : "#e9d5ff")};
 `;
 
 export const CrownJewelTagsRow = styled.div`
@@ -267,9 +267,9 @@ export const CrownTag = styled.span`
   font-size: 10px;
   padding: 4px 12px;
   border-radius: 6px;
-  border: 1px solid rgba(217, 119, 6, 0.25);
-  background: rgba(217, 119, 6, 0.06);
-  color: #d97706;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  background: rgba(139, 92, 246, 0.1);
+  color: #c084fc;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 `;
@@ -281,7 +281,7 @@ export const CrownJewelStatus = styled.div`
   margin-top: 20px;
   font-family: var(--font-sans);
   font-size: 13px;
-  color: #d97706;
+  color: #c084fc;
   font-weight: 500;
 `;
 
@@ -298,16 +298,16 @@ export const CrownSealCircle = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 2px solid rgba(217, 119, 6, 0.4);
+  border: 2px solid rgba(168, 85, 247, 0.45);
   background: radial-gradient(
     circle,
-    rgba(217, 119, 6, 0.1) 0%,
+    rgba(139, 92, 246, 0.15) 0%,
     transparent 70%
   );
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #d97706;
+  color: #c084fc;
 
   @media (min-width: 768px) {
     width: 120px;
@@ -329,7 +329,7 @@ export const CrownFooter = styled.div<{ $isDark: boolean }>`
   justify-content: space-between;
   align-items: center;
   padding-top: 16px;
-  border-top: 1px solid rgba(217, 119, 6, 0.15);
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
   font-family: var(--font-mono);
   font-size: 9px;
   text-transform: uppercase;

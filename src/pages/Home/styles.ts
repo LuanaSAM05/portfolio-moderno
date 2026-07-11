@@ -103,7 +103,7 @@ export const StickyLuxuryHeader = styled.header<{ $isDark: boolean }>`
           border-color: rgba(255, 255, 255, 0.05); /* border-white/5 */
         `
       : css`
-          background-color: rgba(250, 248, 254, 0.82); /* bg-[#FAF8FE]/82 */
+          background-color: rgba(237, 232, 255, 0.82); /* #ede8ff/82 */
           border-color: rgba(139, 92, 246, 0.08); /* border-violet-100/60 */
           box-shadow: 0 4px 12px rgba(139, 92, 246, 0.02);
         `}
@@ -189,15 +189,15 @@ export const DesktopNavbar = styled.nav<{ $isDark: boolean }>`
   letter-spacing: 0.15em; /* tracking-widest */
   transition: color 0.8s;
 
-  color: ${(props) =>
-    props.$isDark ? "#d4d4d8" : "#52525b"}; /* text-zinc-300 / text-[#52525b] */
+  color: ${(props) => (props.$isDark ? "#b9b9ce" : "#6d28d9")};
 `;
 
 export const NavActionButton = styled.button<{ $isDark: boolean }>`
+  position: relative;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 0 0 4px 0;
   transition: color 0.3s;
   font-family: inherit;
   font-size: inherit;
@@ -207,11 +207,28 @@ export const NavActionButton = styled.button<{ $isDark: boolean }>`
   color: inherit;
   font-weight: ${(props) => (props.$isDark ? "normal" : "500")};
 
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1.5px;
+    width: 100%;
+    background-color: ${(props) => (props.$isDark ? "#c084fc" : "#7c3aed")};
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
   &:hover {
     color: ${(props) =>
       props.$isDark
         ? "#c084fc"
         : "#7c3aed"}; /* hover:text-violet-400 : hover:text-violet-650 */
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
   }
 `;
 
@@ -311,8 +328,7 @@ export const MobileDrawerNavigation = styled.nav<{ $isDark: boolean }>`
   letter-spacing: 0.2em; /* tracking-[0.2em] */
   transition: color 0.8s;
 
-  color: ${(props) =>
-    props.$isDark ? "#d4d4d8" : "#3f3f46"}; /* text-zinc-300 / text-zinc-700 */
+  color: ${(props) => (props.$isDark ? "#b9b9ce" : "#6d28d9")};
 `;
 
 export const MobileNavButtonOption = styled.button<{ $isDark: boolean }>`
@@ -354,7 +370,7 @@ export const MobileDrawerCloseButton = styled.button<{ $isDark: boolean }>`
     props.$isDark
       ? css`
           border-color: #27272a; /* border-zinc-800 */
-          color: #71717a; /* text-zinc-505 */
+          color: #b9b9ce;
           &:hover {
             color: #d4d4d8;
           }
@@ -396,12 +412,12 @@ export const EditorialFooterBlock = styled.footer<{ $isDark: boolean }>`
       ? css`
           border-color: #181c24; /* border-zinc-900 */
           background-color: #000000;
-          color: #71717a; /* text-zinc-505 */
+          color: #b9b9ce;
         `
       : css`
           border-color: #f5f3ff; /* border-violet-100 */
-          background-color: #faf9fc;
-          color: #52525b; /* text-zinc-650 */
+          background-color: #ede8ff;
+          color: #71717a;
         `}
 `;
 
@@ -452,8 +468,8 @@ export const FooterPortfolioStamp = styled.span<{ $isDark: boolean }>`
   letter-spacing: 0.15em; /* tracking-widest */
   transition: color 0.6s;
 
-  color: ${(props) => (props.$isDark ? "#3f3f46" : "#7c3aed")};
-  font-weight: ${(props) => (props.$isDark ? "normal" : "500")};
+    color: ${(props) => (props.$isDark ? "#a78bfa" : "#7c3aed")};
+  font-weight: ${(props) => (props.$isDark ? "900" : "900")};
 `;
 
 export const FooterTechnicalSpecsCol = styled.div`
@@ -466,9 +482,15 @@ export const FooterTechnicalSpecsCol = styled.div`
   }
 `;
 
+export const FooterIntroText = styled.p<{ $isDark: boolean }>`
+  transition: color 0.6s;
+  color: ${(props) => (props.$isDark ? "#a78bfa" : "#7c3aed")};
+  font-weight: ${(props) => (props.$isDark ? "900" : "900")};
+`;
+
 export const FooterCreditsMetaSubtext = styled.p<{ $isDark: boolean }>`
   transition: color 0.6s;
-  color: ${(props) => (props.$isDark ? "#3f3f46" : "#71717a")};
+  color: ${(props) => (props.$isDark ? "#b9b9ce" : "#71717a")};
 `;
 
 export const FooterNavigationLinksBox = styled.div<{ $isDark: boolean }>`
@@ -489,7 +511,7 @@ export const FooterNavSelector = styled.span<{ $isDark: boolean }>`
   &:hover {
     color: ${(props) =>
       props.$isDark
-        ? "#d8b4fe"
+        ? "#a78bfa"
         : "#4c1d95"}; /* hover:text-violet-300 : hover:text-violet-800 */
   }
 `;

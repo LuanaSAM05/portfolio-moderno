@@ -22,7 +22,7 @@ export const AboutSectionContainer = styled.section<{ $isDark: boolean }>`
           color: #f4f4f5;
         `
       : css`
-          background: linear-gradient(160deg, #f5f0ff 0%, #faf8ff 50%, #f0ebff 100%);
+          background: #ede8ff;
           color: #27272a;
         `}
 `;
