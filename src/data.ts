@@ -322,6 +322,50 @@ export const PROJECTS: Project[] = [
 
     githubUrl: "https://github.com/LuanaSAM05/app-dev-tempo-reactive-native.git",
   },
+
+  {
+    id: "daniela-dos-santos",
+
+    title: "Site Institucional — Dra. Daniela dos Santos",
+
+    description:
+      "Landing page profissional e responsiva para a Dra. Daniela dos Santos, advogada especializada em Direito de Família, com atuação em Goiânia/GO e região metropolitana.",
+
+    detailedDescription:
+      "Landing page desenvolvida para fortalecer a presença digital da Dra. Daniela dos Santos, apresentando sua trajetória, área de atuação, diferenciais e formas de contato de maneira simples e intuitiva. O projeto foi construído com React, Styled Components e React Icons, com componentização das seções de apresentação, atuação profissional, diferenciais e contato. Conta com layout responsivo para desktop, tablet e mobile, menu responsivo para dispositivos móveis, integração direta com WhatsApp e LinkedIn, botão de retorno ao topo, identidade visual em azul-marinho, branco e dourado, além de animações e efeitos de interação em CSS.",
+
+    category: "frontend",
+
+    tags: [
+      "React",
+      "JavaScript",
+      "Styled Components",
+      "React Icons",
+      "Vite",
+      "CSS",
+    ],
+
+    year: "2026",
+
+    role: "Front-End + UI/UX",
+
+    client: "Site Institucional Jurídico — Direito de Família",
+
+    previewType: "legal",
+
+    stats: [
+      { label: "Responsividade", value: "100%" },
+      { label: "Integração", value: "WhatsApp" },
+      { label: "Identidade Visual", value: "Azul-marinho & Dourado" },
+    ],
+
+    images: ["/projects/direito-de-familia.png"],
+
+    liveUrl: "https://daniela-dos-santos.vercel.app/",
+
+    githubUrl:
+      "https://github.com/LuanaSAM05/Daniela-dos-Santos-Direito-de-Familia.git",
+  },
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
